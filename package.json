@@ -4,7 +4,7 @@
   "description": "projet 4 OpenClassroom",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "sass-actualisation": "sass --watch Assets/css/style.scss Assets/css/style.css"
   },
   "author": "Jm",
   "license": "ISC",
