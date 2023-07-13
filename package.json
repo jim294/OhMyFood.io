@@ -1,0 +1,14 @@
+{
+  "name": "projet-4-ohmyfood",
+  "version": "1.0.0",
+  "description": "projet 4 OpenClassroom",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jm",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.63.6"
+  }
+}
