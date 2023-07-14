@@ -33,27 +33,23 @@ body {
 }
 
 h1 {
-  font-weight: 700;
+  font-family: "Shrikhand", cursive;
+  font-size: 30px;
+  font-weight: 400;
+  line-height: normal;
+}
+
+h2 {
   font-size: 24px;
-  line-height: 28.13px;
+  font-weight: 700;
+  line-height: 18.13px;
 }
 
 h3 {
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 21.09px;
-}
-
-h4 {
-  font-weight: 300;
-  font-size: 17px;
-  line-height: 19.92px;
-}
-
-h5 {
+  font-family: "Shrikhand", cursive;
+  font-size: 28px;
   font-weight: 400;
-  font-size: 16px;
-  line-height: 18.75px;
+  line-height: normal;
 }
 
 p {
@@ -72,8 +68,6 @@ header .logo {
   background-color: white;
   text-align: center;
   align-items: center;
-  font-family: "Shrikhand", cursive;
-  font-size: 30px;
   padding: 14px;
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
 }
@@ -103,7 +97,7 @@ header .search-bar i.fa-location-dot {
 main {
   width: 100%;
 }
-main .menu h1 {
+main .menu h2 {
   text-align: center;
   margin-top: 39.5px;
   margin-bottom: 15px;
@@ -111,13 +105,14 @@ main .menu h1 {
 main .menu p {
   text-align: center;
 }
-main .menu .menu__explore {
+
+.menu__explore {
   display: flex;
   justify-content: center;
   margin-top: 27px;
   margin-bottom: 57px;
 }
-main .menu .menu__explore .explore {
+.menu__explore .explore {
   font-weight: 500;
   font-size: 16px;
   line-height: 18.75px;
@@ -131,7 +126,7 @@ main .menu .menu__explore .explore {
   text-align: center;
   transition: transform 200ms ease-in-out;
 }
-main .menu .menu__explore .explore:hover {
+.menu__explore .explore:hover {
   transform: scale(1.02);
   box-shadow: 0 3px 10px black;
 }
@@ -144,7 +139,7 @@ main .menu .menu__explore .explore:hover {
   background-color: white;
   height: 440px;
 }
-.choices .h1 {
+.choices .functioning {
   display: flex;
   margin-left: -180px;
   margin-top: 48px;
@@ -242,11 +237,15 @@ main .menu .menu__explore .explore:hover {
   gap: 5px;
   padding: 16px 0px 12px 13px;
 }
-.card .card-txt i {
-  position: absolute;
-  top: 22px;
-  right: 25px;
-  font-size: 21px;
+.card .card-title {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 21.09px;
+}
+.card .card-subtitle {
+  font-size: 17px;
+  font-weight: 300;
+  line-height: normal;
 }
 .card .heart .fas {
   color: transparent;
@@ -259,6 +258,12 @@ main .menu .menu__explore .explore:hover {
 .card .heart:hover .fas {
   opacity: 1;
 }
+.card i {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  font-size: 21px;
+}
 
 /* --- footer ---*/
 footer {
@@ -269,9 +274,11 @@ footer {
   background-color: #353535;
   color: white;
 }
-footer h2 {
+footer span {
   font-family: "Shrikhand", cursive;
   font-size: 18px;
+  font-weight: 400;
+  line-height: normal;
   color: white;
   padding-bottom: 9px;
 }
@@ -285,6 +292,57 @@ footer .footer-line {
 }
 footer .tail {
   font-size: 11px;
+}
+
+/* --- page restaurant ---*/
+img {
+  height: 275px;
+  width: 375px;
+  background-size: cover;
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+.page section {
+  margin-top: -45px;
+  border-radius: 40px;
+}
+
+.page__restaurant {
+  display: flex;
+  position: relative;
+  width: 375px;
+  flex-direction: column;
+  background-color: #F6F6F6;
+}
+
+.page__title {
+  position: relative;
+}
+.page__title .heart .fas {
+  color: transparent;
+  background-image: linear-gradient(to top, #FF79DA, #9356DC);
+  background-clip: text;
+  -webkit-background-clip: text;
+  opacity: 0;
+  transition: all 300ms ease-in-out;
+}
+.page__title .heart:hover .fas {
+  opacity: 1;
+}
+.page__title i {
+  position: absolute;
+  top: 40px;
+  right: 41px;
+  font-size: 21px;
+}
+.page__title h3 {
+  margin-left: 17px;
+  margin-top: 32px;
 }
 
 /*# sourceMappingURL=style.css.map */
