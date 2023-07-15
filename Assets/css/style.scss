@@ -71,9 +71,20 @@ $color-main-container: #F6F6F6;
         }
         &:hover .fas {
             opacity: 1;
+            transform: scale(1.04);
         }
     }
 }
+
+@mixin image($background-image, $background-position) {
+    width: 100%;
+    height: 250px;
+    background-image: url($background-image);
+    background-size: cover;
+    background-position: $background-position;
+    border-radius: 15px 15px 0px 0px;
+}
+
 
 body {
     font-family: 'Roboto', sans-serif;
@@ -96,6 +107,10 @@ h2 {
 
 h3 {
     @include Shrikhand-font(28px, 400, normal)
+}
+
+h4 {
+    @include roboto-font(16px, 300, normal)
 }
 
 p {
@@ -197,6 +212,7 @@ main {
     }
     & .choices__menu {
         display: flex;
+        width: 100%;
         gap: 25px;
         margin-top: 26px;
     }
@@ -207,17 +223,23 @@ main {
     }
     & li {
         display: flex;
+        position: relative;
         align-items: center;
-        justify-content: left;
+        justify-content: center;
         gap: 27px;
-        width: 322px;
+        width: 80%;
         height: 72px;
         background-color: #F6F6F6;
         border-radius: 20px;
         box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+        &:hover {
+            transform: scale(1.02);
+            background-color: $color-principal-background;
+            box-shadow: 0 3px 5px #7e7e7e;
+        }
         }
     & span {
-        position: relative;
+        position: absolute;
         left: -15px;
         padding: 4px 8px;
         border: 1px solid $color-primary;
@@ -227,7 +249,13 @@ main {
     }
     & .choices-icone {
         font-size: 19px;
-        color: #7E7E7E;
+        position: relative;
+        color: #7e7e7e;
+        z-index: 1;
+        &:hover {
+            transform: scale(1.02);
+            color: #9356DC;
+        }
     }
     }
 
@@ -238,7 +266,7 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 66px;
+    margin: 14px;
     & .restaurant__title {
         display: flex;
         margin-left: -200px;
@@ -253,6 +281,8 @@ main {
     & .restaurants__card {
         display: flex;
         flex-direction: column;
+        width: 100%;
+        background-size: cover;
         gap: 18px;
         & .new {
             position: relative;
@@ -272,16 +302,24 @@ main {
     }
     }
 
-.card {
+.restaurants__card__card {
     display: flex;
+    position: relative;
+    height: 261px;
     flex-direction: column;
     background-color: white;
     border-radius: 15px;
-    & img {  
-        width: 346px;
-        height: 200px;
-        border-radius: 15px 15px 0px 0px;
-        object-fit: cover;
+    & .image-1 {
+        @include image("/Assets/Images-et-textes-Ohmyfood/images/restaurants/image-1.jpg", bottom);
+    }
+    & .image-2 {
+        @include image("/Assets/Images-et-textes-Ohmyfood/images/restaurants/image-2.jpg", 25% 60%)
+    }
+    & .image-3 {
+        @include image("/Assets/Images-et-textes-Ohmyfood/images/restaurants/image-3.jpg", 25% 101%)
+    }
+    & .image-4 {
+        @include image("/Assets/Images-et-textes-Ohmyfood/images/restaurants/image-4.jpg", 25% 93%)
     }
     & .card-txt {
         display: flex;
@@ -289,7 +327,6 @@ main {
         flex-direction: column;
         gap: 5px;
         padding: 16px 0px 12px 13px;
-
         }
         & .card-title  {
             @include roboto-font(18px, 700, 21.09px)
@@ -332,39 +369,81 @@ footer {
 
 
 img {
-    height: 275px;
-    width: 375px;
-    background-size: cover;
+    width: 100%;
+    height:25vh;
+    object-fit: cover;
 }
 
 .page {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    width: 100%;
     position: relative;
     & section {
         margin-top: -45px;
         border-radius: 40px;
+        display: flex;
+        position: relative;
+        width: 100%;
+        flex-direction: column;
+        background-color: $color-main-container;
+    }
+    & .page__title {
+        position: relative;
+        @include heart;
+        @include heart__i(40px, 41px);
+        h3 {
+            margin-left: 17px;
+            margin-top: 32px;
+        }
+    }
+    & article {
+        margin: 40px 13px 0px 13px;
+        & h4 {
+            position: relative;
+            height: 27px;
+            margin-bottom: 15px;
+            &::after {
+                content: "";
+                position: absolute;
+                top: 25px;
+                left: 0px;
+                height: 3px;
+                width: 40px;
+                background-color: #2FAF94;
+            }
+        }
+    }
+    & .page-card {
+        display: flex;
+        align-items: flex-end;
+        padding: 15px;
+        background-color: white;
+        border-radius: 15px;
+        margin-bottom: 15px;
+        box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+        & .page-card__title {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            gap: 5px;
+            & .page-card__subtitle {
+                @include roboto-font(18px, 500, normal)
+            }
+            & .page-card__subtitle__title {
+                @include roboto-font(15px, 300, normal);
+            }
+        & .page-card__price{
+            @include roboto-font(15px, 700, normal);
+            margin: 15px;
+        }
+        }
     }
 }
 
-.page__restaurant {
-    display: flex;
-    position: relative;
-    width: 375px;
-    flex-direction: column;
-    background-color: $color-main-container;
-}
 
-.page__title {
-    position: relative;
-    @include heart;
-    @include heart__i(40px, 41px);
-    h3 {
-        margin-left: 17px;
-        margin-top: 32px;
-    }
-}
+
+
 
 
 

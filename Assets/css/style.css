@@ -52,6 +52,12 @@ h3 {
   line-height: normal;
 }
 
+h4 {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: normal;
+}
+
 p {
   font-weight: 300;
   font-size: 18px;
@@ -146,6 +152,7 @@ main .menu p {
 }
 .choices .choices__menu {
   display: flex;
+  width: 100%;
   gap: 25px;
   margin-top: 26px;
 }
@@ -156,17 +163,23 @@ main .menu p {
 }
 .choices li {
   display: flex;
+  position: relative;
   align-items: center;
-  justify-content: left;
+  justify-content: center;
   gap: 27px;
-  width: 322px;
+  width: 80%;
   height: 72px;
   background-color: #F6F6F6;
   border-radius: 20px;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
 }
+.choices li:hover {
+  transform: scale(1.02);
+  background-color: #EAEAEA;
+  box-shadow: 0 3px 5px #7e7e7e;
+}
 .choices span {
-  position: relative;
+  position: absolute;
   left: -15px;
   padding: 4px 8px;
   border: 1px solid #9356DC;
@@ -176,7 +189,13 @@ main .menu p {
 }
 .choices .choices-icone {
   font-size: 19px;
-  color: #7E7E7E;
+  position: relative;
+  color: #7e7e7e;
+  z-index: 1;
+}
+.choices .choices-icone:hover {
+  transform: scale(1.02);
+  color: #9356DC;
 }
 
 /* --- restaurant ---*/
@@ -184,7 +203,7 @@ main .menu p {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 66px;
+  margin: 14px;
 }
 .restaurants .restaurant__title {
   display: flex;
@@ -200,6 +219,8 @@ main .menu p {
 .restaurants .restaurants__card {
   display: flex;
   flex-direction: column;
+  width: 100%;
+  background-size: cover;
   gap: 18px;
 }
 .restaurants .restaurants__card .new {
@@ -218,36 +239,64 @@ main .menu p {
   height: 29px;
 }
 
-.card {
+.restaurants__card__card {
   display: flex;
+  position: relative;
+  height: 261px;
   flex-direction: column;
   background-color: white;
   border-radius: 15px;
 }
-.card img {
-  width: 346px;
-  height: 200px;
+.restaurants__card__card .image-1 {
+  width: 100%;
+  height: 250px;
+  background-image: url("/Assets/Images-et-textes-Ohmyfood/images/restaurants/image-1.jpg");
+  background-size: cover;
+  background-position: bottom;
   border-radius: 15px 15px 0px 0px;
-  object-fit: cover;
 }
-.card .card-txt {
+.restaurants__card__card .image-2 {
+  width: 100%;
+  height: 250px;
+  background-image: url("/Assets/Images-et-textes-Ohmyfood/images/restaurants/image-2.jpg");
+  background-size: cover;
+  background-position: 25% 60%;
+  border-radius: 15px 15px 0px 0px;
+}
+.restaurants__card__card .image-3 {
+  width: 100%;
+  height: 250px;
+  background-image: url("/Assets/Images-et-textes-Ohmyfood/images/restaurants/image-3.jpg");
+  background-size: cover;
+  background-position: 25% 101%;
+  border-radius: 15px 15px 0px 0px;
+}
+.restaurants__card__card .image-4 {
+  width: 100%;
+  height: 250px;
+  background-image: url("/Assets/Images-et-textes-Ohmyfood/images/restaurants/image-4.jpg");
+  background-size: cover;
+  background-position: 25% 93%;
+  border-radius: 15px 15px 0px 0px;
+}
+.restaurants__card__card .card-txt {
   display: flex;
   position: relative;
   flex-direction: column;
   gap: 5px;
   padding: 16px 0px 12px 13px;
 }
-.card .card-title {
+.restaurants__card__card .card-title {
   font-size: 18px;
   font-weight: 700;
   line-height: 21.09px;
 }
-.card .card-subtitle {
+.restaurants__card__card .card-subtitle {
   font-size: 17px;
   font-weight: 300;
   line-height: normal;
 }
-.card .heart .fas {
+.restaurants__card__card .heart .fas {
   color: transparent;
   background-image: linear-gradient(to top, #FF79DA, #9356DC);
   background-clip: text;
@@ -255,10 +304,11 @@ main .menu p {
   opacity: 0;
   transition: all 300ms ease-in-out;
 }
-.card .heart:hover .fas {
+.restaurants__card__card .heart:hover .fas {
   opacity: 1;
+  transform: scale(1.04);
 }
-.card i {
+.restaurants__card__card i {
   position: absolute;
   top: 25px;
   right: 25px;
@@ -296,34 +346,30 @@ footer .tail {
 
 /* --- page restaurant ---*/
 img {
-  height: 275px;
-  width: 375px;
-  background-size: cover;
+  width: 100%;
+  height: 25vh;
+  object-fit: cover;
 }
 
 .page {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  width: 100%;
   position: relative;
 }
 .page section {
   margin-top: -45px;
   border-radius: 40px;
-}
-
-.page__restaurant {
   display: flex;
   position: relative;
-  width: 375px;
+  width: 100%;
   flex-direction: column;
   background-color: #F6F6F6;
 }
-
-.page__title {
+.page .page__title {
   position: relative;
 }
-.page__title .heart .fas {
+.page .page__title .heart .fas {
   color: transparent;
   background-image: linear-gradient(to top, #FF79DA, #9356DC);
   background-clip: text;
@@ -331,18 +377,67 @@ img {
   opacity: 0;
   transition: all 300ms ease-in-out;
 }
-.page__title .heart:hover .fas {
+.page .page__title .heart:hover .fas {
   opacity: 1;
+  transform: scale(1.04);
 }
-.page__title i {
+.page .page__title i {
   position: absolute;
   top: 40px;
   right: 41px;
   font-size: 21px;
 }
-.page__title h3 {
+.page .page__title h3 {
   margin-left: 17px;
   margin-top: 32px;
+}
+.page article {
+  margin: 40px 13px 0px 13px;
+}
+.page article h4 {
+  position: relative;
+  height: 27px;
+  margin-bottom: 15px;
+}
+.page article h4::after {
+  content: "";
+  position: absolute;
+  top: 25px;
+  left: 0px;
+  height: 3px;
+  width: 40px;
+  background-color: #2FAF94;
+}
+.page .page-card {
+  display: flex;
+  align-items: flex-end;
+  padding: 15px;
+  background-color: white;
+  border-radius: 15px;
+  margin-bottom: 15px;
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+}
+.page .page-card .page-card__title {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 5px;
+}
+.page .page-card .page-card__title .page-card__subtitle {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: normal;
+}
+.page .page-card .page-card__title .page-card__subtitle__title {
+  font-size: 15px;
+  font-weight: 300;
+  line-height: normal;
+}
+.page .page-card .page-card__title .page-card__price {
+  font-size: 15px;
+  font-weight: 700;
+  line-height: normal;
+  margin: 15px;
 }
 
 /*# sourceMappingURL=style.css.map */
