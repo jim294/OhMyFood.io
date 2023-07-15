@@ -250,7 +250,7 @@ main .menu p {
 .restaurants__card__card .image-1 {
   width: 100%;
   height: 250px;
-  background-image: url("../Assets/Images-et-textes-Ohmyfood/images/restaurants/image-1.jpg");
+  background-image: url("../Images-et-textes-Ohmyfood/images/restaurants/image-1.jpg");
   background-size: cover;
   background-position: bottom;
   border-radius: 15px 15px 0px 0px;
