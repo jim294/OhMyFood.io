@@ -310,16 +310,16 @@ main {
     background-color: white;
     border-radius: 15px;
     & .image-1 {
-        @include image("/Assets/Images-et-textes-Ohmyfood/images/restaurants/image-1.jpg", bottom);
+        @include image("../Images-et-textes-Ohmyfood/images/restaurants/image-1.jpg", bottom);
     }
     & .image-2 {
-        @include image("/Assets/Images-et-textes-Ohmyfood/images/restaurants/image-2.jpg", 25% 60%)
+        @include image("../Images-et-textes-Ohmyfood/images/restaurants/image-2.jpg", 25% 60%)
     }
     & .image-3 {
-        @include image("/Assets/Images-et-textes-Ohmyfood/images/restaurants/image-3.jpg", 25% 101%)
+        @include image("../Images-et-textes-Ohmyfood/images/restaurants/image-3.jpg", 25% 101%)
     }
     & .image-4 {
-        @include image("/Assets/Images-et-textes-Ohmyfood/images/restaurants/image-4.jpg", 25% 93%)
+        @include image("../Images-et-textes-Ohmyfood/images/restaurants/image-4.jpg", 25% 93%)
     }
     & .card-txt {
         display: flex;
