@@ -64,6 +64,14 @@ p {
   line-height: 21.09px;
 }
 
+@keyframes spin {
+  0% {
+    transform: rotate(-150deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
 /* --- header ---*/
 header {
   display: flex;
@@ -410,34 +418,73 @@ img {
 }
 .page .page-card {
   display: flex;
-  align-items: flex-end;
-  padding: 15px;
+  height: auto;
   background-color: white;
   border-radius: 15px;
   margin-bottom: 15px;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
 }
-.page .page-card .page-card__title {
+.page .page-card .page-card__description {
   display: flex;
   flex-direction: column;
+  padding: 15px;
   width: 100%;
   gap: 5px;
+  overflow: hidden;
 }
-.page .page-card .page-card__title .page-card__subtitle {
+.page .page-card .page-card__description .page-card__description__title {
+  height: 21px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
   font-size: 18px;
   font-weight: 500;
   line-height: normal;
 }
-.page .page-card .page-card__title .page-card__subtitle__title {
+.page .page-card .page-card__description .page-card__description__subtitle {
+  height: 18px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
   font-size: 15px;
   font-weight: 300;
   line-height: normal;
 }
-.page .page-card .page-card__title .page-card__price {
+.page .page-card .page-card__price {
+  display: flex;
+  align-items: flex-end;
+  padding: 15px;
+}
+.page .page-card .page-card__price p {
   font-size: 15px;
   font-weight: 700;
   line-height: normal;
-  margin: 15px;
+}
+.page .page-card .page-card__pointer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #99E2D0;
+  margin-right: -55px;
+  width: 59px;
+  transition: all 500ms;
+}
+.page .page-card .page-card__pointer i {
+  display: grid;
+  background: white;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  place-items: center;
+  color: #99E2D0;
+  font-size: 21px;
+}
+.page .page-card:hover .page-card__pointer {
+  margin-right: 0;
+}
+.page .page-card:hover .page-card__pointer i {
+  animation: spin 0.5s ease-in-out;
 }
 
 /*# sourceMappingURL=style.css.map */

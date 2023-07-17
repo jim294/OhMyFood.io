@@ -119,6 +119,15 @@ p {
     line-height: 21.09px;
 }
 
+@keyframes spin {
+    0% {
+        transform: rotate(-150deg);
+    }
+    100% {
+        transform: rotate(0);
+    }
+}
+
 /* --- header ---*/
 
 header {
@@ -416,27 +425,68 @@ img {
     }
     & .page-card {
         display: flex;
-        align-items: flex-end;
-        padding: 15px;
+        height: auto;
         background-color: white;
         border-radius: 15px;
         margin-bottom: 15px;
         box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
-        & .page-card__title {
+        overflow: hidden;
+        & .page-card__description {
             display: flex;
             flex-direction: column;
+            padding: 15px;
             width: 100%;
             gap: 5px;
-            & .page-card__subtitle {
-                @include roboto-font(18px, 500, normal)
+            overflow: hidden;
+            & .page-card__description__title {
+                height: 21px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                @include roboto-font(18px, 500, normal);
             }
-            & .page-card__subtitle__title {
+            & .page-card__description__subtitle {
+                height: 18px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
                 @include roboto-font(15px, 300, normal);
             }
-        & .page-card__price{
-            @include roboto-font(15px, 700, normal);
-            margin: 15px;
         }
+        & .page-card__price{
+            display: flex;
+            align-items: flex-end;
+            padding: 15px;
+            & p {
+                @include roboto-font(15px, 700, normal);
+            }
+        }
+        & .page-card__pointer {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: $color-tertiary;
+            margin-right: -55px;
+            width: 59px;
+            transition: all 500ms;
+            & i {
+                display: grid;
+                background: white;
+                border-radius: 50%;
+                width: 30px;
+                height: 30px;
+                place-items: center;
+                color: $color-tertiary;
+                font-size: 21px;
+            }
+            }
+            &:hover {
+                & .page-card__pointer {
+                margin-right: 0;
+                & i {
+                    animation: spin 0.5s ease-in-out;
+                }
+            }
         }
     }
 }
