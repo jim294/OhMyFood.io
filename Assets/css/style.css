@@ -167,6 +167,39 @@ a {
     transform: scaleX(1);
   }
 }
+/* --- loader ---*/
+@keyframes loader {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+@keyframes gear {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.loader {
+  display: grid;
+  place-items: center;
+  background-color: #9fd8f2;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  z-index: 2;
+  opacity: 0.9;
+  animation: loader 0.5s 3s ease-in-out forwards;
+  transform-origin: top left;
+}
+.loader i {
+  animation: gear 3s ease-in-out;
+}
+
 /* --- header ---*/
 header {
   display: flex;
