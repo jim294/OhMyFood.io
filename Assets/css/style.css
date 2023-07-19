@@ -10,7 +10,86 @@ turquoise : #99E2D0
 */
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Shrikhand&display=swap");
 /* --- RESET ---*/
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio,
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
 video {
   margin: 0;
   padding: 0;
@@ -24,14 +103,13 @@ video {
 /*--- global ---*/
 body {
   font-family: "Roboto", sans-serif;
+  justify-content: center;
 }
 
 .main-container {
   display: flex;
   flex-direction: column;
   position: relative;
-  width: 100%;
-  background-color: #F6F6F6;
 }
 
 h1 {
@@ -126,12 +204,18 @@ header .search-bar i.fa-location-dot {
 /* --- main ---*/
 /* --- menu ---*/
 main {
-  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+main .menu {
+  background-color: #F6F6F6;
+  justify-content: center;
 }
 main .menu h2 {
   text-align: center;
-  margin-top: 39.5px;
-  margin-bottom: 15px;
+  padding-top: 39.5px;
+  padding-bottom: 15px;
+  line-height: normal;
 }
 main .menu p {
   text-align: center;
@@ -140,8 +224,9 @@ main .menu p {
 .menu__explore {
   display: flex;
   justify-content: center;
-  margin-top: 27px;
-  margin-bottom: 57px;
+  padding-top: 27px;
+  padding-bottom: 57px;
+  background-color: #F6F6F6;
 }
 .menu__explore .explore {
   font-weight: 500;
@@ -164,35 +249,29 @@ main .menu p {
 
 /* --- fonctionnement ---*/
 .choices {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   background-color: white;
-  height: 440px;
+  padding: 68px 20px;
 }
-.choices .functioning {
-  display: flex;
-  margin-left: -180px;
-  margin-top: 48px;
+.choices .container {
+  max-width: 1440px;
+  margin: auto;
 }
 .choices .choices__menu {
   display: flex;
+  flex-direction: column;
+  align-items: center;
   width: 100%;
   gap: 25px;
   margin-top: 26px;
-}
-.choices ol {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  padding: 0px 0px 0px 20px;
 }
 .choices li {
   display: flex;
   position: relative;
   align-items: center;
-  justify-content: center;
+  padding-left: 33px;
   gap: 27px;
-  width: 80%;
+  width: 100%;
   height: 72px;
   background-color: #F6F6F6;
   border-radius: 20px;
@@ -225,24 +304,24 @@ main .menu p {
 
 /* --- restaurant ---*/
 .restaurants {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 14px;
+  padding: 0px 14px 66px 14px;
+  background-color: #F6F6F6;
+  gap: 20px;
+}
+.restaurants .container {
+  max-width: 1440px;
+  margin: auto;
 }
 .restaurants .restaurant__title {
   display: flex;
-  margin-left: -200px;
-  margin-top: 48px;
-  margin-bottom: 20px;
-  background-color: #F6F6F6;
+  padding: 48px 0px 10px 0px;
 }
 .restaurants .restaurants__card {
   display: flex;
   flex-direction: column;
-  width: 100%;
+  justify-content: center;
   background-size: cover;
-  gap: 18px;
+  gap: 20px;
 }
 .restaurants .restaurants__card .new {
   position: relative;
@@ -259,65 +338,63 @@ main .menu p {
   width: 80px;
   height: 29px;
 }
-
-.restaurants__card__card {
+.restaurants .restaurants__card .restaurants__card__card {
   display: flex;
   position: relative;
-  height: 261px;
   flex-direction: column;
   background-color: white;
   border-radius: 15px;
 }
-.restaurants__card__card .image-1 {
+.restaurants .restaurants__card .restaurants__card__card .image-1 {
   width: 100%;
-  height: 250px;
+  height: 170px;
   background-image: url("../Images-et-textes-Ohmyfood/images/restaurants/image-1.jpg");
   background-size: cover;
-  background-position: bottom;
+  background-position: 25% 60%;
   border-radius: 15px 15px 0px 0px;
 }
-.restaurants__card__card .image-2 {
+.restaurants .restaurants__card .restaurants__card__card .image-2 {
   width: 100%;
-  height: 250px;
+  height: 170px;
   background-image: url("../Images-et-textes-Ohmyfood/images/restaurants/image-2.jpg");
   background-size: cover;
   background-position: 25% 60%;
   border-radius: 15px 15px 0px 0px;
 }
-.restaurants__card__card .image-3 {
+.restaurants .restaurants__card .restaurants__card__card .image-3 {
   width: 100%;
-  height: 250px;
+  height: 170px;
   background-image: url("../Images-et-textes-Ohmyfood/images/restaurants/image-3.jpg");
   background-size: cover;
-  background-position: 25% 101%;
+  background-position: 25% 90%;
   border-radius: 15px 15px 0px 0px;
 }
-.restaurants__card__card .image-4 {
+.restaurants .restaurants__card .restaurants__card__card .image-4 {
   width: 100%;
-  height: 250px;
+  height: 170px;
   background-image: url("../Images-et-textes-Ohmyfood/images/restaurants/image-4.jpg");
   background-size: cover;
   background-position: 25% 93%;
   border-radius: 15px 15px 0px 0px;
 }
-.restaurants__card__card .card-txt {
+.restaurants .restaurants__card .restaurants__card__card .card-txt {
   display: flex;
   position: relative;
   flex-direction: column;
   gap: 5px;
   padding: 16px 0px 12px 13px;
 }
-.restaurants__card__card .card-title {
+.restaurants .restaurants__card .restaurants__card__card .card-title {
   font-size: 18px;
   font-weight: 700;
   line-height: 21.09px;
 }
-.restaurants__card__card .card-subtitle {
+.restaurants .restaurants__card .restaurants__card__card .card-subtitle {
   font-size: 17px;
   font-weight: 300;
   line-height: normal;
 }
-.restaurants__card__card .heart .fas {
+.restaurants .restaurants__card .restaurants__card__card .heart .fas {
   color: transparent;
   background-image: linear-gradient(to top, #FF79DA, #9356DC);
   background-clip: text;
@@ -325,11 +402,11 @@ main .menu p {
   opacity: 0;
   transition: all 300ms ease-in-out;
 }
-.restaurants__card__card .heart:hover .fas {
+.restaurants .restaurants__card .restaurants__card__card .heart:hover .fas {
   opacity: 1;
   transform: scale(1.04);
 }
-.restaurants__card__card i {
+.restaurants .restaurants__card .restaurants__card__card i {
   position: absolute;
   top: 25px;
   right: 25px;
@@ -340,7 +417,8 @@ main .menu p {
 footer {
   display: flex;
   flex-direction: column;
-  gap: 7px;
+  height: 186px;
+  gap: 16px;
   padding: 25px 22px;
   background-color: #353535;
   color: white;
@@ -351,7 +429,6 @@ footer span {
   font-weight: 400;
   line-height: normal;
   color: white;
-  padding-bottom: 9px;
 }
 footer a {
   text-decoration: none;
@@ -359,28 +436,71 @@ footer a {
 }
 footer .footer-line {
   display: flex;
-  gap: 11px;
+  gap: 12px;
+}
+footer .footer-inline {
+  display: flex;
+  gap: 7px;
+}
+footer .invers-footer__line {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+footer .invers-footer-inline {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+footer .invers-footer {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
 }
 footer .tail {
   font-size: 11px;
 }
 
-/* --- page restaurant ---*/
-img {
-  width: 100%;
-  height: 25vh;
-  object-fit: cover;
-}
-
 .page {
   display: flex;
   flex-direction: column;
-  width: 100%;
   position: relative;
 }
-.page section {
+.page .image-1 {
+  width: 100%;
+  height: 25vh;
+  background-image: url("../Images-et-textes-Ohmyfood/images/restaurants/image-1.jpg");
+  background-size: cover;
+  background-position: center;
+  border-radius: 15px 15px 0px 0px;
+}
+.page .image-2 {
+  width: 100%;
+  height: 25vh;
+  background-image: url("../Images-et-textes-Ohmyfood/images/restaurants/image-2.jpg");
+  background-size: cover;
+  background-position: center;
+  border-radius: 15px 15px 0px 0px;
+}
+.page .image-3 {
+  width: 100%;
+  height: 25vh;
+  background-image: url("../Images-et-textes-Ohmyfood/images/restaurants/image-3.jpg");
+  background-size: cover;
+  background-position: center;
+  border-radius: 15px 15px 0px 0px;
+}
+.page .image-4 {
+  width: 100%;
+  height: 25vh;
+  background-image: url("../Images-et-textes-Ohmyfood/images/restaurants/image-4.jpg");
+  background-size: cover;
+  background-position: center;
+  border-radius: 15px 15px 0px 0px;
+}
+.page .page-container {
   margin-top: -45px;
-  border-radius: 40px;
+  border-radius: 40px 40px 0px 0px;
   display: flex;
   position: relative;
   width: 100%;
@@ -404,7 +524,7 @@ img {
 }
 .page .page__title i {
   position: absolute;
-  top: 40px;
+  top: 9px;
   right: 41px;
   font-size: 21px;
 }
@@ -579,6 +699,167 @@ img {
   animation-fill-mode: both;
 }
 
-/* --- médiaquieris ---*/
+/* Le code ci-dessous correspond à la version responsive uniquement */
+/****** Media queries ***********/
+/* Medium devices (tablets, less/equal than 1024px) */
+@media (min-width: 767.98px) {
+  .restaurants .image-1 {
+    width: 100%;
+    height: 250px;
+    background-image: url("../Images-et-textes-Ohmyfood/images/restaurants/image-1.jpg");
+    background-size: cover;
+    background-position: 25% 60%;
+    border-radius: 15px 15px 0px 0px;
+  }
+  .restaurants .image-2 {
+    width: 100%;
+    height: 250px;
+    background-image: url("../Images-et-textes-Ohmyfood/images/restaurants/image-2.jpg");
+    background-size: cover;
+    background-position: 25% 60%;
+    border-radius: 15px 15px 0px 0px;
+  }
+  .restaurants .image-3 {
+    width: 100%;
+    height: 250px;
+    background-image: url("../Images-et-textes-Ohmyfood/images/restaurants/image-3.jpg");
+    background-size: cover;
+    background-position: 25% 82%;
+    border-radius: 15px 15px 0px 0px;
+  }
+  .restaurants .image-4 {
+    width: 100%;
+    height: 250px;
+    background-image: url("../Images-et-textes-Ohmyfood/images/restaurants/image-4.jpg");
+    background-size: cover;
+    background-position: 25% 75%;
+    border-radius: 15px 15px 0px 0px;
+  }
+}
+@media (min-width: 1024px) {
+  main .menu .menu__explore {
+    padding-bottom: 30px;
+  }
+  main .choices .choices__menu {
+    flex-direction: row;
+    gap: 37px;
+  }
+  .restaurants .restaurants__card {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 40px;
+    column-gap: 95px;
+  }
+  .restaurants .restaurants__card .restaurants__card__card {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 15px;
+  }
+  .restaurants .restaurants__card .restaurants__card__card .image-1 {
+    width: 100%;
+    height: 250px;
+    background-image: url("../Images-et-textes-Ohmyfood/images/restaurants/image-1.jpg");
+    background-size: cover;
+    background-position: center;
+    border-radius: 15px 15px 0px 0px;
+  }
+  .restaurants .restaurants__card .restaurants__card__card .image-2 {
+    width: 100%;
+    height: 250px;
+    background-image: url("../Images-et-textes-Ohmyfood/images/restaurants/image-2.jpg");
+    background-size: cover;
+    background-position: 25% 60%;
+    border-radius: 15px 15px 0px 0px;
+  }
+  .restaurants .restaurants__card .restaurants__card__card .image-3 {
+    width: 100%;
+    height: 250px;
+    background-image: url("../Images-et-textes-Ohmyfood/images/restaurants/image-3.jpg");
+    background-size: cover;
+    background-position: 25% 75%;
+    border-radius: 15px 15px 0px 0px;
+  }
+  .restaurants .restaurants__card .restaurants__card__card .image-4 {
+    width: 100%;
+    height: 250px;
+    background-image: url("../Images-et-textes-Ohmyfood/images/restaurants/image-4.jpg");
+    background-size: cover;
+    background-position: 25% 75%;
+    border-radius: 15px 15px 0px 0px;
+  }
+  .restaurants .restaurants__card .restaurants__card__card .card-txt {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    gap: 5px;
+    /*padding: 16px 300px 12px 13px;*/
+  }
+  footer {
+    flex-direction: row-reverse;
+    align-items: end;
+    gap: 85px;
+    height: 114px;
+    padding-right: 35px;
+  }
+  footer span {
+    margin-right: 25px;
+  }
+  footer .invers-footer {
+    display: flex;
+    flex-direction: row;
+    gap: 60px;
+    padding-top: 6px;
+  }
+  footer .invers-footer .invers-footer__line {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+  }
+  footer .invers-footer .invers-footer__line.footer-inline {
+    display: flex;
+    gap: 7px;
+  }
+  footer .invers-footer .invers-footer-inline {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+  }
+  /* --- page ---*/
+  .page {
+    align-items: center;
+  }
+  .page .page-container {
+    align-items: center;
+    max-width: 1055px;
+  }
+  .page .page-container h3 {
+    text-align: center;
+  }
+  .page .page__title i {
+    position: absolute;
+    top: 9px;
+    right: 145px;
+    font-size: 21px;
+  }
+  .page .page-card {
+    width: 634px;
+  }
+}
+@media (min-width: 1440px) {
+  .choices .functioning {
+    flex-direction: column;
+  }
+  .choices .choices__menu {
+    flex-direction: row;
+    justify-content: center;
+    gap: 37px;
+  }
+  .restaurant {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
 
 /*# sourceMappingURL=style.css.map */
