@@ -36,6 +36,12 @@
 }
 
 @media (min-width: 1024px) {
+    .loader {
+        &::after {
+            font-size: 300px;
+        }
+    }
+
     main {
         & .menu {
             .menu__explore {
