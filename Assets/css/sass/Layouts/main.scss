@@ -1,0 +1,20 @@
+main {
+    display: flex;
+    flex-direction: column;
+
+    & .menu {
+        background-color: $color-main-container;
+        justify-content: center;
+
+        & h2 {
+            text-align: center;
+            padding-top: 39.5px;
+            padding-bottom: 15px;
+            line-height: normal;
+        }
+
+        & p {
+            text-align: center;
+        }
+    }
+}

@@ -1,13 +1,4 @@
 @charset "UTF-8";
-/*  ---FONTS--
-font-family: 'Roboto', sans-serif;
-font-family: 'Shrikhand', cursive;
-*/
-/* --Colors--
-violet : #9356DC
-rose : #FF79DA
-turquoise : #99E2D0
-*/
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Shrikhand&display=swap");
 /* --- RESET ---*/
 html,
@@ -149,58 +140,6 @@ a {
   color: black;
 }
 
-@keyframes spin {
-  0% {
-    transform: rotate(-150deg);
-  }
-  100% {
-    transform: rotate(0);
-  }
-}
-@keyframes animation-menus-scale {
-  0% {
-    transform: scaleY(0);
-    transform: scaleX(0);
-  }
-  100% {
-    transform: scaleY(1);
-    transform: scaleX(1);
-  }
-}
-/* --- loader ---*/
-@keyframes loader {
-  0% {
-    transform: scale(1);
-  }
-  100% {
-    transform: scale(0);
-  }
-}
-@keyframes gear {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-.loader {
-  display: grid;
-  place-items: center;
-  background-color: #9fd8f2;
-  height: 100%;
-  width: 100%;
-  position: fixed;
-  z-index: 2;
-  opacity: 0.9;
-  animation: loader 0.5s 3s ease-in-out forwards;
-  transform-origin: top left;
-}
-.loader i {
-  animation: gear 3s ease-in-out;
-}
-
-/* --- header ---*/
 header {
   display: flex;
   flex-direction: column;
@@ -224,9 +163,9 @@ header .search-bar {
 header .search-bar input {
   border: none;
   background-color: #EAEAEA;
-  font-family: "Roboto", sans-serif;
   font-size: 16px;
   font-weight: 500;
+  line-height: normal;
   color: #353535;
 }
 header .search-bar i.fa-location-dot {
@@ -234,8 +173,6 @@ header .search-bar i.fa-location-dot {
   padding-left: 75px;
 }
 
-/* --- main ---*/
-/* --- menu ---*/
 main {
   display: flex;
   flex-direction: column;
@@ -280,7 +217,6 @@ main .menu p {
   box-shadow: 0 3px 10px black;
 }
 
-/* --- fonctionnement ---*/
 .choices {
   background-color: white;
   padding: 68px 20px;
@@ -335,7 +271,6 @@ main .menu p {
   color: #9356DC;
 }
 
-/* --- restaurant ---*/
 .restaurants {
   padding: 0px 14px 66px 14px;
   background-color: #F6F6F6;
@@ -446,7 +381,6 @@ main .menu p {
   font-size: 21px;
 }
 
-/* --- footer ---*/
 footer {
   display: flex;
   flex-direction: column;
@@ -650,8 +584,177 @@ footer .tail {
 .page .page-card:hover .page-card__pointer {
   margin-right: 0;
 }
+@keyframes spin {
+  0% {
+    transform: rotate(-150deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
 .page .page-card:hover .page-card__pointer i {
   animation: spin 0.5s ease-in-out;
+}
+
+/* --- animation des menus de pages ---*/
+.item-1 {
+  animation: 500ms 50ms animation-menus-scale;
+  animation-timing-function: cubic-bezier(0.5, 1.58, 0.34, 0.82);
+  animation-fill-mode: both;
+}
+@keyframes animation-menus-scale {
+  0% {
+    transform: scaleY(0);
+    transform: scaleX(0);
+  }
+  100% {
+    transform: scaleY(1);
+    transform: scaleX(1);
+  }
+}
+
+.item-2 {
+  animation: 500ms 100ms animation-menus-scale;
+  animation-timing-function: cubic-bezier(0.5, 1.58, 0.34, 0.82);
+  animation-fill-mode: both;
+}
+@keyframes animation-menus-scale {
+  0% {
+    transform: scaleY(0);
+    transform: scaleX(0);
+  }
+  100% {
+    transform: scaleY(1);
+    transform: scaleX(1);
+  }
+}
+
+.item-3 {
+  animation: 500ms 150ms animation-menus-scale;
+  animation-timing-function: cubic-bezier(0.5, 1.58, 0.34, 0.82);
+  animation-fill-mode: both;
+}
+@keyframes animation-menus-scale {
+  0% {
+    transform: scaleY(0);
+    transform: scaleX(0);
+  }
+  100% {
+    transform: scaleY(1);
+    transform: scaleX(1);
+  }
+}
+
+.item-4 {
+  animation: 500ms 200ms animation-menus-scale;
+  animation-timing-function: cubic-bezier(0.5, 1.58, 0.34, 0.82);
+  animation-fill-mode: both;
+}
+@keyframes animation-menus-scale {
+  0% {
+    transform: scaleY(0);
+    transform: scaleX(0);
+  }
+  100% {
+    transform: scaleY(1);
+    transform: scaleX(1);
+  }
+}
+
+.item-5 {
+  animation: 500ms 250ms animation-menus-scale;
+  animation-timing-function: cubic-bezier(0.5, 1.58, 0.34, 0.82);
+  animation-fill-mode: both;
+}
+@keyframes animation-menus-scale {
+  0% {
+    transform: scaleY(0);
+    transform: scaleX(0);
+  }
+  100% {
+    transform: scaleY(1);
+    transform: scaleX(1);
+  }
+}
+
+.item-6 {
+  animation: 500ms 300ms animation-menus-scale;
+  animation-timing-function: cubic-bezier(0.5, 1.58, 0.34, 0.82);
+  animation-fill-mode: both;
+}
+@keyframes animation-menus-scale {
+  0% {
+    transform: scaleY(0);
+    transform: scaleX(0);
+  }
+  100% {
+    transform: scaleY(1);
+    transform: scaleX(1);
+  }
+}
+
+.item-7 {
+  animation: 500ms 350ms animation-menus-scale;
+  animation-timing-function: cubic-bezier(0.5, 1.58, 0.34, 0.82);
+  animation-fill-mode: both;
+}
+@keyframes animation-menus-scale {
+  0% {
+    transform: scaleY(0);
+    transform: scaleX(0);
+  }
+  100% {
+    transform: scaleY(1);
+    transform: scaleX(1);
+  }
+}
+
+.item-8 {
+  animation: 500ms 400ms animation-menus-scale;
+  animation-timing-function: cubic-bezier(0.5, 1.58, 0.34, 0.82);
+  animation-fill-mode: both;
+}
+@keyframes animation-menus-scale {
+  0% {
+    transform: scaleY(0);
+    transform: scaleX(0);
+  }
+  100% {
+    transform: scaleY(1);
+    transform: scaleX(1);
+  }
+}
+
+.item-9 {
+  animation: 500ms 450ms animation-menus-scale;
+  animation-timing-function: cubic-bezier(0.5, 1.58, 0.34, 0.82);
+  animation-fill-mode: both;
+}
+@keyframes animation-menus-scale {
+  0% {
+    transform: scaleY(0);
+    transform: scaleX(0);
+  }
+  100% {
+    transform: scaleY(1);
+    transform: scaleX(1);
+  }
+}
+
+.item-sup {
+  animation: 500ms 500ms animation-menus-scale;
+  animation-timing-function: cubic-bezier(0.5, 1.58, 0.34, 0.82);
+  animation-fill-mode: both;
+}
+@keyframes animation-menus-scale {
+  0% {
+    transform: scaleY(0);
+    transform: scaleX(0);
+  }
+  100% {
+    transform: scaleY(1);
+    transform: scaleX(1);
+  }
 }
 
 /* --- fleche titre --*/
@@ -671,70 +774,44 @@ footer .tail {
   padding: 17px;
 }
 
-/* --- animation des menus de pages ---*/
-.item-1 {
-  animation: 500ms 50ms animation-menus-scale;
-  animation-timing-function: cubic-bezier(0.5, 1.58, 0.34, 0.82);
-  animation-fill-mode: both;
+.loader {
+  display: grid;
+  place-items: center;
+  background-color: #9356DC;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  z-index: 2;
+  opacity: 0.9;
+  animation: loader 0.5s 3s ease-in-out forwards;
+  transform-origin: top left;
+}
+.loader::after {
+  content: "bienvenue";
+  font-size: 300px;
+  text-align: left;
+  color: #FF79DA;
+  animation: gear 3s ease-in-out;
 }
 
-.item-2 {
-  animation: 500ms 100ms animation-menus-scale;
-  animation-timing-function: cubic-bezier(0.5, 1.58, 0.34, 0.82);
-  animation-fill-mode: both;
+@keyframes loader {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
 }
-
-.item-3 {
-  animation: 500ms 150ms animation-menus-scale;
-  animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  animation-fill-mode: both;
+@keyframes gear {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
-
-.item-4 {
-  animation: 500ms 200ms animation-menus-scale;
-  animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  animation-fill-mode: both;
-}
-
-.item-5 {
-  animation: 500ms 250ms animation-menus-scale;
-  animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  animation-fill-mode: both;
-}
-
-.item-6 {
-  animation: 500ms 300ms animation-menus-scale;
-  animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  animation-fill-mode: both;
-}
-
-.item-7 {
-  animation: 500ms 350ms animation-menus-scale;
-  animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  animation-fill-mode: both;
-}
-
-.item-8 {
-  animation: 500ms 400ms animation-menus-scale;
-  animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  animation-fill-mode: both;
-}
-
-.item-9 {
-  animation: 500ms 450ms animation-menus-scale;
-  animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  animation-fill-mode: both;
-}
-
-.item-sup {
-  animation: 500ms 500ms animation-menus-scale;
-  animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  animation-fill-mode: both;
-}
-
 /* Le code ci-dessous correspond à la version responsive uniquement */
 /****** Media queries ***********/
-/* Medium devices (tablets, less/equal than 1024px) */
 @media (min-width: 767.98px) {
   .restaurants .image-1 {
     width: 100%;

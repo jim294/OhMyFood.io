@@ -1,0 +1,40 @@
+.loader {
+    display: grid;
+    place-items: center;
+    background-color: $color-primary;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 2;
+    opacity: 0.9;
+    animation: loader 0.5s 3s ease-in-out forwards;
+    transform-origin: top left;
+
+    &::after {
+        content: "bienvenue";
+        font-size: 300px;
+        text-align: left;
+        color: $color-secondary;
+        animation: gear 3s ease-in-out;
+    }
+}
+
+@keyframes loader {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(0);
+    }
+}
+
+@keyframes gear {
+    0% {
+        transform: scale(0);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}

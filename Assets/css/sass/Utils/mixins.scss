@@ -1,0 +1,71 @@
+@mixin carte-title {
+    font-weight: 500;
+    font-size: 18px;
+}
+
+@mixin roboto-font($font-size, $font-weight, $line-height) {
+    font-size: $font-size;
+    font-weight: $font-weight;
+    line-height: $line-height;
+}
+
+@mixin Shrikhand-font($font-size, $font-weight, $line-height) {
+    font-family: "Shrikhand", cursive;
+    font-size: $font-size;
+    font-weight: $font-weight;
+    line-height: $line-height;
+}
+
+@mixin heart__i($top, $right) {
+    i {
+        position: absolute;
+        top: $top;
+        right: $right;
+        font-size: 21px;
+    }
+}
+
+@mixin heart {
+    & .heart {
+        & .fas {
+            color: transparent;
+            background-image: linear-gradient(to top, $color-secondary, $color-primary);
+            background-clip: text;
+            -webkit-background-clip: text;
+            opacity: 0;
+            transition: all 300ms ease-in-out;
+        }
+
+        &:hover .fas {
+            opacity: 1;
+            transform: scale(1.04);
+        }
+    }
+}
+
+@mixin image($width, $height, $background-image, $background-position) {
+    width: $width;
+    height: $height;
+    background-image: url($background-image);
+    background-size: cover;
+    background-position: $background-position;
+    border-radius: 15px 15px 0px 0px;
+}
+
+@mixin animation-menu($timing) {
+    @keyframes animation-menus-scale {
+        0% {
+            transform: scaleY(0);
+            transform: scaleX(0);
+        }
+
+        100% {
+            transform: scaleY(1);
+            transform: scaleX(1);
+        }
+    }
+
+    animation: 500ms $timing animation-menus-scale;
+    animation-timing-function: cubic-bezier(.5, 1.58, .34, .82);
+    animation-fill-mode: both;
+}

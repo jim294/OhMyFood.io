@@ -1,0 +1,149 @@
+.page {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+    .image-1 {
+        @include image(100%, 25vh, "../Images-et-textes-Ohmyfood/images/restaurants/image-1.jpg", center);
+    }
+
+    .image-2 {
+        @include image(100%, 25vh, "../Images-et-textes-Ohmyfood/images/restaurants/image-2.jpg", center);
+    }
+
+    .image-3 {
+        @include image(100%, 25vh, "../Images-et-textes-Ohmyfood/images/restaurants/image-3.jpg", center);
+    }
+
+    .image-4 {
+        @include image(100%, 25vh, "../Images-et-textes-Ohmyfood/images/restaurants/image-4.jpg", center);
+    }
+
+    & .page-container {
+        margin-top: -45px;
+        border-radius: 40px 40px 0px 0px;
+        display: flex;
+        position: relative;
+        width: 100%;
+        flex-direction: column;
+        background-color: $color-main-container;
+    }
+
+    & .page__title {
+        position: relative;
+        @include heart;
+        @include heart__i(9px, 41px);
+
+        & h3 {
+            margin-left: 17px;
+            margin-top: 32px;
+        }
+    }
+
+    & article {
+        margin: 40px 13px 0px 13px;
+
+        & h4 {
+            position: relative;
+            height: 27px;
+            margin-bottom: 15px;
+
+            &::after {
+                content: "";
+                position: absolute;
+                top: 25px;
+                left: 0px;
+                height: 3px;
+                width: 40px;
+                background-color: $color-new;
+            }
+        }
+    }
+
+    & .page-card {
+        display: flex;
+        height: auto;
+        background-color: white;
+        border-radius: 15px;
+        margin-bottom: 15px;
+        box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+        overflow: hidden;
+
+        & .page-card__description {
+            display: flex;
+            flex-direction: column;
+            padding: 15px;
+            width: 100%;
+            gap: 5px;
+            overflow: hidden;
+
+            & .page-card__description__title {
+                height: 21px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                @include roboto-font(18px, 500, normal);
+            }
+
+            & .page-card__description__subtitle {
+                height: 18px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                @include roboto-font(15px, 300, normal);
+            }
+        }
+
+        & .page-card__price {
+            display: flex;
+            align-items: flex-end;
+            padding: 15px;
+
+            & p {
+                @include roboto-font(15px, 700, normal);
+            }
+        }
+
+        & .page-card__pointer {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            background-color: $color-tertiary;
+            margin-right: -60px;
+            width: 59px;
+            transition: all 500ms;
+
+            & i {
+                display: grid;
+                background: white;
+                border-radius: 50%;
+                width: 30px;
+                height: 30px;
+                place-items: center;
+                color: $color-tertiary;
+                font-size: 21px;
+            }
+        }
+
+        &:hover {
+            & .page-card__pointer {
+                margin-right: 0;
+
+                @keyframes spin {
+                    0% {
+                        transform: rotate(-150deg);
+                    }
+
+                    100% {
+                        transform: rotate(0);
+                    }
+                }
+
+                & i {
+                    animation: spin 0.5s ease-in-out;
+                }
+            }
+        }
+    }
+}

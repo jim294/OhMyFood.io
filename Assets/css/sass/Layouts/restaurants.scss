@@ -1,0 +1,83 @@
+.restaurants {
+    .container {
+        max-width: 1440px;
+        margin: auto;
+    }
+
+    padding: 0px 14px 66px 14px;
+    background-color: $color-main-container;
+    gap: 20px;
+
+    & .restaurant__title {
+        display: flex;
+        padding: 48px 0px 10px 0px;
+    }
+
+    & .restaurants__card {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-size: cover;
+        gap: 20px;
+
+        & .new {
+            position: relative;
+        }
+
+        & .new::before {
+            content: "Nouveau";
+            position: absolute;
+            display: grid;
+            place-items: center;
+            top: 20px;
+            right: 15px;
+            background-color: $color-tertiary;
+            color: $color-new;
+            width: 80px;
+            height: 29px;
+        }
+
+        & .restaurants__card__card {
+            display: flex;
+            position: relative;
+            flex-direction: column;
+            background-color: white;
+            border-radius: 15px;
+
+            & .image-1 {
+                @include image(100%, 170px, "../Images-et-textes-Ohmyfood/images/restaurants/image-1.jpg", 25% 60%);
+            }
+
+            & .image-2 {
+                @include image(100%, 170px, "../Images-et-textes-Ohmyfood/images/restaurants/image-2.jpg", 25% 60%)
+            }
+
+            & .image-3 {
+                @include image(100%, 170px, "../Images-et-textes-Ohmyfood/images/restaurants/image-3.jpg", 25% 90%)
+            }
+
+            & .image-4 {
+                @include image(100%, 170px, "../Images-et-textes-Ohmyfood/images/restaurants/image-4.jpg", 25% 93%)
+            }
+
+            & .card-txt {
+                display: flex;
+                position: relative;
+                flex-direction: column;
+                gap: 5px;
+                padding: 16px 0px 12px 13px;
+            }
+
+            & .card-title {
+                @include roboto-font(18px, 700, 21.09px)
+            }
+
+            & .card-subtitle {
+                @include roboto-font(17px, 300, normal)
+            }
+
+            @include heart;
+            @include heart__i(25px, 25px)
+        }
+    }
+}

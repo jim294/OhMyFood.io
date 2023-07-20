@@ -1,0 +1,17 @@
+/* --- fleche titre --*/
+
+.icon::before {
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+}
+
+.arrow::before {
+    font: var(--fa-font-solid);
+    content: "\f060";
+    position: absolute;
+    color: black;
+    font-size: 30px;
+    z-index: 1;
+    padding: 17px;
+}

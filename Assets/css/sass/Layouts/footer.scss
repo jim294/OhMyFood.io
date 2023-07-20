@@ -1,0 +1,51 @@
+footer {
+    display: flex;
+    flex-direction: column;
+    height: 186px;
+    gap: 16px;
+    padding: 25px 22px;
+    background-color: $color-hard-grey;
+    color: white;
+
+    & span {
+        @include Shrikhand-font(18px, 400, normal);
+        color: white;
+    }
+
+    & a {
+        text-decoration: none;
+        color: white;
+    }
+
+    & .footer-line {
+        display: flex;
+        gap: 12px;
+    }
+
+    & .footer-inline {
+        display: flex;
+        gap: 7px;
+    }
+
+    & .invers-footer__line {
+        display: flex;
+        flex-direction: column;
+        gap: 7px;
+    }
+
+    & .invers-footer-inline {
+        display: flex;
+        flex-direction: column;
+        gap: 7px;
+    }
+
+    & .invers-footer {
+        display: flex;
+        flex-direction: column;
+        gap: 7px;
+    }
+
+    .tail {
+        font-size: 11px;
+    }
+}
