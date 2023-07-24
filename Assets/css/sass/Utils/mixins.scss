@@ -28,17 +28,17 @@
 @mixin heart {
     & .heart {
         & .fas {
-            color: transparent;
             background-image: linear-gradient(to top, $color-secondary, $color-primary);
             background-clip: text;
             -webkit-background-clip: text;
+            color: transparent;
             opacity: 0;
             transition: all 300ms ease-in-out;
         }
 
         &:hover .fas {
             opacity: 1;
-            transform: scale(1.04);
+            transform: scale(1.06);
         }
     }
 }

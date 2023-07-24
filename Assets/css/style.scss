@@ -1,4 +1,5 @@
 @import "./sass/base";
+@import "./sass/Layouts/loader.scss";
 @import "./sass/Layouts/header";
 @import "./sass/Layouts/main";
 @import "./sass/Layouts/explore";
@@ -6,9 +7,8 @@
 @import "./sass/Layouts/restaurants";
 @import "./sass/Layouts/footer";
 @import "./sass/Pages/menus";
-@import "./sass/Utils/Animations";
+@import "./sass/Utils/Animations/animations-pages-menus.scss";
 @import "./sass/Components/title-row";
-@import "./sass/Layouts/loader.scss";
 
 /* Le code ci-dessous correspond à la version responsive uniquement */
 
@@ -36,11 +36,6 @@
 }
 
 @media (min-width: 1024px) {
-    .loader {
-        &::after {
-            font-size: 300px;
-        }
-    }
 
     main {
         & .menu {
@@ -163,6 +158,11 @@
 }
 
 @media (min-width: 1440px) {
+    .loader {
+        &::after {
+            font-size: 300px;
+        }
+    }
     .choices {
         & .functioning {
             flex-direction: column;

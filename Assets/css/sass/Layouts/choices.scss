@@ -35,6 +35,12 @@
             transform: scale(1.02);
             background-color: $color-principal-background;
             box-shadow: 0 3px 5px #7e7e7e;
+            & .choices-icone {
+                font-size: 19px;
+                position: relative;
+                color: #7e7e7e;
+                z-index: 1;
+                color: #9356DC;
         }
     }
 
@@ -47,16 +53,5 @@
         background-color: $color-primary;
         color: white;
     }
-
-    & .choices-icone {
-        font-size: 19px;
-        position: relative;
-        color: #7e7e7e;
-        z-index: 1;
-
-        &:hover {
-            transform: scale(1.02);
-            color: #9356DC;
-        }
     }
 }

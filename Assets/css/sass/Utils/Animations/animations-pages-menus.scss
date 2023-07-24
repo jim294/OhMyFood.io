@@ -1,0 +1,41 @@
+/* --- animation des menus de pages ---*/
+
+.item-1 {
+    @include animation-menu(50ms);
+}
+
+.item-2 {
+    @include animation-menu(100ms);
+}
+
+.item-3 {
+    @include animation-menu(150ms);
+}
+
+.item-4 {
+    @include animation-menu(200ms);
+}
+
+.item-5 {
+    @include animation-menu(250ms);
+}
+
+.item-6 {
+    @include animation-menu(300ms);
+}
+
+.item-7 {
+    @include animation-menu(350ms);
+}
+
+.item-8 {
+    @include animation-menu(400ms);
+}
+
+.item-9 {
+    @include animation-menu(450ms);
+}
+
+.item-sup {
+    @include animation-menu(500ms);
+}

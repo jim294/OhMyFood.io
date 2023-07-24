@@ -140,6 +140,41 @@ a {
   color: black;
 }
 
+.loader {
+  display: grid;
+  place-items: center;
+  background-color: #9356DC;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  z-index: 2;
+  opacity: 0.9;
+  animation: loader 0.5s 3s ease-in-out forwards;
+  transform-origin: top left;
+}
+.loader::after {
+  content: "bienvenue";
+  font-size: 50px;
+  color: #FF79DA;
+  animation: gear 3s ease-in-out;
+}
+
+@keyframes loader {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+@keyframes gear {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 header {
   display: flex;
   flex-direction: column;
@@ -251,7 +286,14 @@ main .menu p {
   background-color: #EAEAEA;
   box-shadow: 0 3px 5px #7e7e7e;
 }
-.choices span {
+.choices li:hover .choices-icone {
+  font-size: 19px;
+  position: relative;
+  color: #7e7e7e;
+  z-index: 1;
+  color: #9356DC;
+}
+.choices li span {
   position: absolute;
   left: -15px;
   padding: 4px 8px;
@@ -259,16 +301,6 @@ main .menu p {
   border-radius: 50%;
   background-color: #9356DC;
   color: white;
-}
-.choices .choices-icone {
-  font-size: 19px;
-  position: relative;
-  color: #7e7e7e;
-  z-index: 1;
-}
-.choices .choices-icone:hover {
-  transform: scale(1.02);
-  color: #9356DC;
 }
 
 .restaurants {
@@ -363,16 +395,16 @@ main .menu p {
   line-height: normal;
 }
 .restaurants .restaurants__card .restaurants__card__card .heart .fas {
-  color: transparent;
   background-image: linear-gradient(to top, #FF79DA, #9356DC);
   background-clip: text;
   -webkit-background-clip: text;
+  color: transparent;
   opacity: 0;
   transition: all 300ms ease-in-out;
 }
 .restaurants .restaurants__card .restaurants__card__card .heart:hover .fas {
   opacity: 1;
-  transform: scale(1.04);
+  transform: scale(1.06);
 }
 .restaurants .restaurants__card .restaurants__card__card i {
   position: absolute;
@@ -478,16 +510,16 @@ footer .tail {
   position: relative;
 }
 .page .page__title .heart .fas {
-  color: transparent;
   background-image: linear-gradient(to top, #FF79DA, #9356DC);
   background-clip: text;
   -webkit-background-clip: text;
+  color: transparent;
   opacity: 0;
   transition: all 300ms ease-in-out;
 }
 .page .page__title .heart:hover .fas {
   opacity: 1;
-  transform: scale(1.04);
+  transform: scale(1.06);
 }
 .page .page__title i {
   position: absolute;
@@ -569,7 +601,7 @@ footer .tail {
   background-color: #99E2D0;
   margin-right: -60px;
   width: 59px;
-  transition: all 500ms;
+  transition: margin-right 500ms;
 }
 .page .page-card .page-card__pointer i {
   display: grid;
@@ -774,42 +806,6 @@ footer .tail {
   padding: 17px;
 }
 
-.loader {
-  display: grid;
-  place-items: center;
-  background-color: #9356DC;
-  height: 100%;
-  width: 100%;
-  position: fixed;
-  z-index: 2;
-  opacity: 0.9;
-  animation: loader 0.5s 3s ease-in-out forwards;
-  transform-origin: top left;
-}
-.loader::after {
-  content: "bienvenue";
-  font-size: 50px;
-  text-align: left;
-  color: #FF79DA;
-  animation: gear 3s ease-in-out;
-}
-
-@keyframes loader {
-  0% {
-    transform: scale(1);
-  }
-  100% {
-    transform: scale(0);
-  }
-}
-@keyframes gear {
-  0% {
-    transform: scale(0);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
 /* Le code ci-dessous correspond à la version responsive uniquement */
 /****** Media queries ***********/
 @media (min-width: 767.98px) {
@@ -847,9 +843,6 @@ footer .tail {
   }
 }
 @media (min-width: 1024px) {
-  .loader::after {
-    font-size: 300px;
-  }
   main .menu .menu__explore {
     padding-bottom: 30px;
   }
@@ -961,6 +954,9 @@ footer .tail {
   }
 }
 @media (min-width: 1440px) {
+  .loader::after {
+    font-size: 300px;
+  }
   .choices .functioning {
     flex-direction: column;
   }
