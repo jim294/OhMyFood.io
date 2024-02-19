@@ -5,7 +5,7 @@ L'objectif d'intégrer puis de dynamiser une page web avec des animations CSS en
 
 Vous pouvez retrouver le [brief complet ici](https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/DW_P3/Brief%20cre%CC%81atif%20-%20Ohmyfood!.pdf)
 
-Mon site visible sur : [OhMyFood by Jim294](https://jim294.github.io/OhMyFood.io/)
+Mon site est visible sur : [OhMyFood by Jim294](https://jim294.github.io/OhMyFood.io/)
 
 ## Objectifs
 
