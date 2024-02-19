@@ -4,7 +4,8 @@
   "description": "projet 4 OpenClassroom",
   "main": "index.js",
   "scripts": {
-    "sass-actualisation": "sass --watch Assets/css/style.scss Assets/css/style.css"
+    "sass-actualisation": "sass --watch Assets/css/style.scss Assets/css/style.css",
+    "start": "http-server"
   },
   "author": "Jm",
   "license": "ISC",
